@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
@@ -106,7 +108,10 @@ function Chatbot() {
               className={`message ${msg.sender}`}
               data-sender={msg.sender}
             >
-              {msg.text}
+              <Markdown remarkPlugins={[[remarkGfm, { singleTilde: false }]]}>
+                {msg.text}
+              </Markdown>
+
             </div>
           ))}
           {loading && <div className="message bot thinking">Thinking…</div>}

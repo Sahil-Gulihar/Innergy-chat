@@ -171,7 +171,6 @@
   animation: fadeIn 0.35s ease;
   box-shadow: var(--shadow-sm);
   word-wrap: break-word;
-  white-space: pre-wrap;
   background: var(--bubble-bot-bg);
   backdrop-filter: blur(6px);
   border: 1px solid var(--bubble-border);
@@ -223,6 +222,17 @@
   text-align: center;
   align-self: center;
   max-width: 92%;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message ul,
+.message ol {
+  padding-inline-start: 20px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 /* Input Area */
