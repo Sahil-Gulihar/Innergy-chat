@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// IMPORTANT: Add your API key to the .env.local file
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 if (!API_KEY) {

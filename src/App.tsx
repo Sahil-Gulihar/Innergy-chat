@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Gemini AI Chatbot</h1>
+
       <Chatbot />
     </>
   );
